@@ -41,11 +41,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Seesion2.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Seesion2.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Seesion2.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
               <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ErrorHandling .php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ErrorHandling .php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -63,6 +73,7 @@
         <option value="$PROJECT_DIR$/Cookie.php" />
         <option value="$PROJECT_DIR$/Session.php" />
         <option value="$PROJECT_DIR$/Seesion2.php" />
+        <option value="$PROJECT_DIR$/ErrorHandling .php" />
       </list>
     </option>
   </component>
@@ -73,9 +84,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
-    <option name="x" value="141" />
-    <option name="y" value="239" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="-63" />
+    <option name="y" value="258" />
     <option name="width" value="1346" />
     <option name="height" value="605" />
   </component>
@@ -141,15 +152,15 @@
       <option name="presentableId" value="Default" />
       <updated>1519395792866</updated>
       <workItem from="1519395794128" duration="2113000" />
-      <workItem from="1519470114924" duration="4578000" />
+      <workItem from="1519470114924" duration="5790000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6691000" />
+    <option name="totallyTimeSpent" value="7903000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="141" y="239" width="1346" height="605" extended-state="0" />
+    <frame x="-63" y="258" width="1346" height="605" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962406" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -227,6 +238,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ErrorHandling .php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
           <folding />
         </state>
       </provider>
