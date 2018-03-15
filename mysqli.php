@@ -1,51 +1,61 @@
 <?php
 
 
-$server="localhost";
-$username="root";
-$password="";
+$server = "localhost";
+$username = "root";
+$password = "";
+$dbname = "mydb";
+$con = new mysqli($server, $username, $password, $dbname);
+if (!$con) {
+    die("Connection fail" . mysqli_connect_error());
 
-$con=new mysqli($server,$username,$password);
-////////////////////object oriented ////////////////////////////////
-//if($con->connect_error)
-//{
-//    die("Connection has been fail:".$con->connect_error);
-//
-//}
-//
-//else
-//{
-//
-//    $sql="CREATE DATABASE  MYDB";
-//    if ($con->query($sql)==true)
-//    {
-//        echo "database create sucessfull";
-//
-//    }
-//
-//    else
-//    {
-//        echo "Database is not created ";
-//    }
-//}
-
-///////////////////// nnormal////////////
-
-if (!$con)
-{
-
-    die("Database was not crate".mysqli_connect_error() );
-}
-  $sql="CREATE DATABASE  MYDB";
-if (mysqli_query($con,$sql))
-{
-    echo "Database created succesfully";
 }
 
-else
-{
-    echo "fail to conenected ";
+
+?>
+
+    <!dodtype html>
+    <html>
+
+    <head>
+
+        <title>
+
+            this is example
+
+        </title>
+    </head>
+
+    <body>
+
+    <form action="" method="post">
+        <label for="">Enter First Name </label>
+        <input type="text" name="fname" value="">
+        <label for="">Enter Last Name </label>
+        <input type="text" name="lname" value="">
+        <label for="">Enter Email </label>
+        <input type="email" name="email" value="">
+        <input type="submit" name="submit" value="submit">
+    </form>
+    </body>
+
+
+    </html>
+
+
+<?php
+if (isset($_POST['submit'])) {
+    $fname = $_POST['fname'];
+    $lname = $_POST['lname'];
+    $lname = $_POST['email'];
+    $insert = "INSERT into  myguests  (firstname ,lastname,email) VALUE ('$fname','$lname','&email')";
+    if (mysqli_query($con, $insert)) {
+        echo "<script> alert('New record added sucessfully') </script>";
+
+    } else {
+        echo "Connect" . $insert . mysqli_error($con);
+
+    }
     mysqli_close($con);
-
 }
 ?>
