@@ -48,14 +48,23 @@ if (isset($_POST['submit'])) {
     $fname = $_POST['fname'];
     $lname = $_POST['lname'];
     $lname = $_POST['email'];
-    $insert = "INSERT into  myguests  (firstname ,lastname,email) VALUE ('$fname','$lname','&email')";
-    if (mysqli_query($con, $insert)) {
-        echo "<script> alert('New record added sucessfully') </script>";
+    $stmt = $con->prepare("INSERT into  myguests  (firstname ,lastname,email) VALUE (?,? ,?)");
+    $stmt->bind_param("sss", $firstname, $lastname, $email);
+    $firstname="$fname";
+    $lastname="$lname";
+    $email="$email";
+    $stmt->execute();
+    echo "New records created successfully";
 
-    } else {
-        echo "Connect" . $insert . mysqli_error($con);
-
-    }
-    mysqli_close($con);
+//    if (mysqli_query($con, $stmt)) {
+//        //i wil get last insert id afert ecustion or insertion
+//        $last_id=$con->insert_id;
+//        echo "<script> alert('New record added sucessfully') </script>".$last_id;
+//
+//    } else {
+//        echo "Connect" . $stmt . mysqli_error($con);
+//
+//    }
+//    mysqli_close($con);
 }
 ?>

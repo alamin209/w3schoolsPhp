@@ -41,13 +41,17 @@ if (isset($_POST['submit'])) {
     $lname = $_POST['lname'];
     $email = $_POST['email'];
     try {
+        //i wil get last insert id afert ecustion or insertion
 //        $conn = new PDO("mysql:host=$servername:dbname=$dnmane", $username, $password);
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $sql = "INSERT INTO   mygust (fiirstname, lastname, email)
 VALUES ( '$fname', '$lname', '$email')";
+//        $last_id=$conn->lastInsertId();
+
         $conn->exec($sql);
-        echo "Inforamtion added  suceessfully";
+        $last_id = $conn->lastInsertId();
+        echo "Inforamtion added  suceessfully". $last_id;
     } catch (PDOException $e) {
         echo $sql . "<br>" . $e->getMessage();
     }
