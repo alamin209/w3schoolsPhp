@@ -45,11 +45,20 @@ if (isset($_POST['submit'])) {
 //        $conn = new PDO("mysql:host=$servername:dbname=$dnmane", $username, $password);
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "INSERT INTO   mygust (fiirstname, lastname, email)
-VALUES ( '$fname', '$lname', '$email')";
+        $sql = $conn->prepare("INSERT INTO   mygust (fiirstname, lastname, email)
+VALUES ( ':fname', ':lname', ':email')");
+
+        $sql->bindParam(':fname', $fname);
+        $sql->bindParam(':lname', $lname);
+        $sql->bindParam(':email', $email);
+        $fname='$fname';
+        $lname='$lname';
+        $email='$email';
+
+
 //        $last_id=$conn->lastInsertId();
 
-        $conn->exec($sql);
+        $sql->execute();
         $last_id = $conn->lastInsertId();
         echo "Inforamtion added  suceessfully". $last_id;
     } catch (PDOException $e) {
